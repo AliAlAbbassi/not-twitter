@@ -1,10 +1,14 @@
-import { InputType, Field } from "type-graphql";
+import { InputType, Field } from 'type-graphql'
 @InputType()
 export class UsernamePasswordInput {
   @Field()
-  email: string;
+  email: string
   @Field()
-  username: string;
+  username: string
   @Field()
-  password: string;
+  password: string
+  @Field(() => String, { nullable: true })
+  bio?: string | null
+  @Field(() => String, { nullable: true })
+  profilePhotoUrl?: string | null
 }

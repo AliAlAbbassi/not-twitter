@@ -1,12 +1,9 @@
-import { Box, Button, Flex, Heading, Link, Stack, Text } from "@chakra-ui/core";
-import { withUrqlClient } from "next-urql";
+import { Box, Button, Flex, Stack, Text } from "@chakra-ui/core";
 import NextLink from "next/link";
-import { useState } from "react";
 import { EditDeletePostButtons } from "../components/EditDeletePostButtons";
 import { Layout } from "../components/Layout";
 import { UpdootSection } from "../components/UpdootSection";
-import { usePostsQuery, PostsQuery } from "../generated/graphql";
-import { createUrqlClient } from "../utils/createUrqlClient";
+import { usePostsQuery } from "../generated/graphql";
 import { withApollo } from "../utils/withApollo";
 
 const Index = () => {
@@ -18,10 +15,10 @@ const Index = () => {
     notifyOnNetworkStatusChange: true,
   });
 
+
   if (!loading && !data) {
     return (
       <div>
-        <div>you got query failed for some reason</div>
         <div>{error?.message}</div>
       </div>
     );
