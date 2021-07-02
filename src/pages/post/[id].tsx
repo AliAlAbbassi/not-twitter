@@ -32,7 +32,7 @@ const Post = ({ }) => {
 
   return (
     <Layout>
-      <Heading mb={4}>{data.post.title}</Heading>
+      {/* <Heading mb={4}>{data.post.title}</Heading> */}
       <Box mb={4}>{data.post.text}</Box>
       <EditDeletePostButtons
         id={data.post.id}
