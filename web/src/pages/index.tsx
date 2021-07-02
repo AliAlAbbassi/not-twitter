@@ -96,7 +96,7 @@ const Index = () => {
               my={8}
             >
               load more
-          </Button>
+            </Button>
           </Flex>
         ) : null
       }
